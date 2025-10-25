@@ -1,0 +1,1 @@
+/usr/local/bin/c++ -std=c++17 -Wall -Wextra -Wpedantic -g CMakeFiles/lab03.dir/main.cpp.o CMakeFiles/lab03.dir/src/Trapeze.cpp.o CMakeFiles/lab03.dir/src/Rhombus.cpp.o CMakeFiles/lab03.dir/src/Pentagon.cpp.o CMakeFiles/lab03.dir/src/FiguresArray.cpp.o -o lab03 

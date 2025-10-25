@@ -1,0 +1,46 @@
+{
+    "name": "C++ Lab03 Development Environment",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "twxs.cmake",
+                "ms-vscode.makefile-tools",
+                "cschlosser.doxdocgen",
+                "ms-vscode.cpptools-extension-pack",
+                "matepek.vscode-catch2-test-adapter"
+            ],
+            "settings": {
+                "C_Cpp.default.cppStandard": "c++17",
+                "C_Cpp.default.cStandard": "c17",
+                "C_Cpp.default.intelliSenseMode": "gcc-x64",
+                "cmake.configureOnOpen": true,
+                "files.associations": {
+                    "*.h": "cpp",
+                    "*.hpp": "cpp",
+                    "*.tpp": "cpp"
+                }
+            }
+        }
+    },
+    
+    "runArgs": [
+        "--cap-add=SYS_PTRACE",
+        "--security-opt",
+        "seccomp=unconfined"
+    ],
+    
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace/lab03,type=bind"
+    ],
+    
+    "postCreateCommand": "echo 'Development environment ready for Lab03!' && g++ --version && cmake --version",
+    
+    "remoteUser": "root"
+}

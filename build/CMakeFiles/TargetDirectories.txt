@@ -1,0 +1,3 @@
+/workspaces/User/Desktop/lab3cpp/build/CMakeFiles/rebuild_cache.dir
+/workspaces/User/Desktop/lab3cpp/build/CMakeFiles/edit_cache.dir
+/workspaces/User/Desktop/lab3cpp/build/CMakeFiles/lab03.dir

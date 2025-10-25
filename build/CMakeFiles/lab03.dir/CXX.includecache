@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspaces/User/Desktop/lab3cpp/include/Figure.h
+iostream
+-
+utility
+-
+
+/workspaces/User/Desktop/lab3cpp/include/FiguresArray.h
+Figure.h
+/workspaces/User/Desktop/lab3cpp/include/Figure.h
+
+/workspaces/User/Desktop/lab3cpp/include/Pentagon.h
+Figure.h
+/workspaces/User/Desktop/lab3cpp/include/Figure.h
+
+/workspaces/User/Desktop/lab3cpp/include/Rhombus.h
+Figure.h
+/workspaces/User/Desktop/lab3cpp/include/Figure.h
+
+/workspaces/User/Desktop/lab3cpp/include/Trapeze.h
+Figure.h
+/workspaces/User/Desktop/lab3cpp/include/Figure.h
+
+/workspaces/User/Desktop/lab3cpp/main.cpp
+iostream
+-
+include/Trapeze.h
+/workspaces/User/Desktop/lab3cpp/include/Trapeze.h
+include/Rhombus.h
+/workspaces/User/Desktop/lab3cpp/include/Rhombus.h
+include/Pentagon.h
+/workspaces/User/Desktop/lab3cpp/include/Pentagon.h
+include/FiguresArray.h
+/workspaces/User/Desktop/lab3cpp/include/FiguresArray.h
+
