@@ -6,12 +6,9 @@
 
 int main()
 {
-    FiguresArray array;
+    FiguresArray arr;
 
-    std::cout << "=== Figure Collection Program ===\n";
-    std::cout << "You can add as many figures as you want!\n\n";
-
-    int choice;
+    int cmd;
     while (true)
     {
         std::cout << "Menu:\n";
@@ -21,75 +18,74 @@ int main()
         std::cout << "4 - Show all figures info\n";
         std::cout << "5 - Remove figure by index\n";
         std::cout << "0 - Exit program\n";
-        std::cout << "Current figures count: " << array.getSize() << "\n";
+        std::cout << "Current figures count: " << arr.getSize() << "\n";
         std::cout << "Enter your choice: ";
 
-        std::cin >> choice;
+        std::cin >> cmd;
 
-        if (choice == 0)
+        if (cmd == 0)
         {
-            std::cout << "Exiting program...\n";
             break;
         }
 
-        switch (choice)
+        switch (cmd)
         {
         case 1:
         {
-            Trapeze *trapeze = new Trapeze();
+            Trapeze *t = new Trapeze();
             std::cout << "Enter trapeze parameters (center_x center_y base1 base2 height): ";
-            std::cin >> *trapeze;
-            array.addFigure(trapeze);
+            std::cin >> *t;
+            arr.addFigure(t);
             std::cout << "Trapeze added successfully!\n\n";
             break;
         }
         case 2:
         {
-            Rhombus *rhombus = new Rhombus();
+            Rhombus *r = new Rhombus();
             std::cout << "Enter rhombus parameters (center_x center_y diagonal1 diagonal2): ";
-            std::cin >> *rhombus;
-            array.addFigure(rhombus);
+            std::cin >> *r;
+            arr.addFigure(r);
             std::cout << "Rhombus added successfully!\n\n";
             break;
         }
         case 3:
         {
-            Pentagon *pentagon = new Pentagon();
+            Pentagon *p = new Pentagon();
             std::cout << "Enter pentagon parameters (center_x center_y side): ";
-            std::cin >> *pentagon;
-            array.addFigure(pentagon);
+            std::cin >> *p;
+            arr.addFigure(p);
             std::cout << "Pentagon added successfully!\n\n";
             break;
         }
         case 4:
         {
-            if (array.getSize() == 0)
+            if (arr.getSize() == 0)
             {
                 std::cout << "No figures in the array yet.\n\n";
             }
             else
             {
                 std::cout << "\n=== All Figures Information ===\n";
-                array.printAllInfo();
-                std::cout << "Total area of all figures: " << array.totalArea() << "\n\n";
+                arr.printAllInfo();
+                std::cout << "Total area of all figures: " << arr.totalArea() << "\n\n";
             }
             break;
         }
         case 5:
         {
-            if (array.getSize() == 0)
+            if (arr.getSize() == 0)
             {
                 std::cout << "No figures to remove.\n\n";
             }
             else
             {
-                std::cout << "Enter index of figure to remove (0-" << array.getSize() - 1 << "): ";
-                size_t index;
-                std::cin >> index;
+                std::cout << "Enter index of figure to remove (0-" << arr.getSize() - 1 << "): ";
+                size_t idx;
+                std::cin >> idx;
 
                 try
                 {
-                    array.removeFigure(index);
+                    arr.removeFigure(idx);
                     std::cout << "Figure removed successfully!\n\n";
                 }
                 catch (const std::out_of_range &e)
@@ -103,17 +99,6 @@ int main()
             std::cout << "Invalid choice. Please try again.\n\n";
             break;
         }
-    }
-
-    if (array.getSize() > 0)
-    {
-        std::cout << "\n=== Final Results ===\n";
-        array.printAllInfo();
-        std::cout << "Final total area: " << array.totalArea() << "\n";
-    }
-    else
-    {
-        std::cout << "No figures were created.\n";
     }
 
     return 0;

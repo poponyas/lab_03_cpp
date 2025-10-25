@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/workspaces/User/Desktop/lab3cpp/main.cpp" "/workspaces/User/Desktop/lab3cpp/build/CMakeFiles/lab03.dir/main.cpp.o"
-  "/workspaces/User/Desktop/lab3cpp/src/FiguresArray.cpp" "/workspaces/User/Desktop/lab3cpp/build/CMakeFiles/lab03.dir/src/FiguresArray.cpp.o"
-  "/workspaces/User/Desktop/lab3cpp/src/Pentagon.cpp" "/workspaces/User/Desktop/lab3cpp/build/CMakeFiles/lab03.dir/src/Pentagon.cpp.o"
-  "/workspaces/User/Desktop/lab3cpp/src/Rhombus.cpp" "/workspaces/User/Desktop/lab3cpp/build/CMakeFiles/lab03.dir/src/Rhombus.cpp.o"
-  "/workspaces/User/Desktop/lab3cpp/src/Trapeze.cpp" "/workspaces/User/Desktop/lab3cpp/build/CMakeFiles/lab03.dir/src/Trapeze.cpp.o"
+  "/workspaces/lab3cpp/main.cpp" "/workspaces/lab3cpp/build/CMakeFiles/lab03.dir/main.cpp.o"
+  "/workspaces/lab3cpp/src/FiguresArray.cpp" "/workspaces/lab3cpp/build/CMakeFiles/lab03.dir/src/FiguresArray.cpp.o"
+  "/workspaces/lab3cpp/src/Pentagon.cpp" "/workspaces/lab3cpp/build/CMakeFiles/lab03.dir/src/Pentagon.cpp.o"
+  "/workspaces/lab3cpp/src/Rhombus.cpp" "/workspaces/lab3cpp/build/CMakeFiles/lab03.dir/src/Rhombus.cpp.o"
+  "/workspaces/lab3cpp/src/Trapeze.cpp" "/workspaces/lab3cpp/build/CMakeFiles/lab03.dir/src/Trapeze.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Figure.h
+iostream
+-
+utility
+-
+
+../include/FiguresArray.h
+Figure.h
+../include/Figure.h
+
+../include/Pentagon.h
+Figure.h
+../include/Figure.h
+
+../include/Rhombus.h
+Figure.h
+../include/Figure.h
+
+../include/Trapeze.h
+Figure.h
+../include/Figure.h
+
+/workspaces/lab3cpp/tests/test_figures.cpp
+gtest/gtest.h
+-
+Trapeze.h
+/workspaces/lab3cpp/tests/Trapeze.h
+Rhombus.h
+/workspaces/lab3cpp/tests/Rhombus.h
+Pentagon.h
+/workspaces/lab3cpp/tests/Pentagon.h
+FiguresArray.h
+/workspaces/lab3cpp/tests/FiguresArray.h
+sstream
+-
+

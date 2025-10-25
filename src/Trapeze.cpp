@@ -62,7 +62,7 @@ Trapeze &Trapeze::operator=(Figure &&other)
         base2 = otherTrapeze->base2;
         height = otherTrapeze->height;
 
-                otherTrapeze->center_x = 0;
+        otherTrapeze->center_x = 0;
         otherTrapeze->center_y = 0;
         otherTrapeze->base1 = 0;
         otherTrapeze->base2 = 0;

@@ -67,10 +67,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/User/Desktop/lab3cpp
+CMAKE_SOURCE_DIR = /workspaces/lab3cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/User/Desktop/lab3cpp/build
+CMAKE_BINARY_DIR = /workspaces/lab3cpp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,11 +97,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/User/Desktop/lab3cpp/build/CMakeFiles /workspaces/User/Desktop/lab3cpp/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/lab3cpp/build/CMakeFiles /workspaces/lab3cpp/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/User/Desktop/lab3cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/lab3cpp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +139,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+.PHONY : tests/fast
 
 #=============================================================================
 # Target rules for targets named lab03
@@ -175,6 +199,7 @@ src/FiguresArray.o: src/FiguresArray.cpp.o
 
 # target to build an object file
 src/FiguresArray.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/FiguresArray.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab03.dir/build.make CMakeFiles/lab03.dir/src/FiguresArray.cpp.o
 .PHONY : src/FiguresArray.cpp.o
 
@@ -184,6 +209,7 @@ src/FiguresArray.i: src/FiguresArray.cpp.i
 
 # target to preprocess a source file
 src/FiguresArray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/FiguresArray.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab03.dir/build.make CMakeFiles/lab03.dir/src/FiguresArray.cpp.i
 .PHONY : src/FiguresArray.cpp.i
 
@@ -193,6 +219,7 @@ src/FiguresArray.s: src/FiguresArray.cpp.s
 
 # target to generate assembly for a file
 src/FiguresArray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/FiguresArray.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab03.dir/build.make CMakeFiles/lab03.dir/src/FiguresArray.cpp.s
 .PHONY : src/FiguresArray.cpp.s
 
@@ -202,6 +229,7 @@ src/Pentagon.o: src/Pentagon.cpp.o
 
 # target to build an object file
 src/Pentagon.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/Pentagon.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab03.dir/build.make CMakeFiles/lab03.dir/src/Pentagon.cpp.o
 .PHONY : src/Pentagon.cpp.o
 
@@ -211,6 +239,7 @@ src/Pentagon.i: src/Pentagon.cpp.i
 
 # target to preprocess a source file
 src/Pentagon.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/Pentagon.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab03.dir/build.make CMakeFiles/lab03.dir/src/Pentagon.cpp.i
 .PHONY : src/Pentagon.cpp.i
 
@@ -220,6 +249,7 @@ src/Pentagon.s: src/Pentagon.cpp.s
 
 # target to generate assembly for a file
 src/Pentagon.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/Pentagon.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab03.dir/build.make CMakeFiles/lab03.dir/src/Pentagon.cpp.s
 .PHONY : src/Pentagon.cpp.s
 
@@ -229,6 +259,7 @@ src/Rhombus.o: src/Rhombus.cpp.o
 
 # target to build an object file
 src/Rhombus.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/Rhombus.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab03.dir/build.make CMakeFiles/lab03.dir/src/Rhombus.cpp.o
 .PHONY : src/Rhombus.cpp.o
 
@@ -238,6 +269,7 @@ src/Rhombus.i: src/Rhombus.cpp.i
 
 # target to preprocess a source file
 src/Rhombus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/Rhombus.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab03.dir/build.make CMakeFiles/lab03.dir/src/Rhombus.cpp.i
 .PHONY : src/Rhombus.cpp.i
 
@@ -247,6 +279,7 @@ src/Rhombus.s: src/Rhombus.cpp.s
 
 # target to generate assembly for a file
 src/Rhombus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/Rhombus.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab03.dir/build.make CMakeFiles/lab03.dir/src/Rhombus.cpp.s
 .PHONY : src/Rhombus.cpp.s
 
@@ -256,6 +289,7 @@ src/Trapeze.o: src/Trapeze.cpp.o
 
 # target to build an object file
 src/Trapeze.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/Trapeze.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab03.dir/build.make CMakeFiles/lab03.dir/src/Trapeze.cpp.o
 .PHONY : src/Trapeze.cpp.o
 
@@ -265,6 +299,7 @@ src/Trapeze.i: src/Trapeze.cpp.i
 
 # target to preprocess a source file
 src/Trapeze.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/Trapeze.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab03.dir/build.make CMakeFiles/lab03.dir/src/Trapeze.cpp.i
 .PHONY : src/Trapeze.cpp.i
 
@@ -274,8 +309,36 @@ src/Trapeze.s: src/Trapeze.cpp.s
 
 # target to generate assembly for a file
 src/Trapeze.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/Trapeze.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab03.dir/build.make CMakeFiles/lab03.dir/src/Trapeze.cpp.s
 .PHONY : src/Trapeze.cpp.s
+
+tests/test_figures.o: tests/test_figures.cpp.o
+
+.PHONY : tests/test_figures.o
+
+# target to build an object file
+tests/test_figures.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test_figures.cpp.o
+.PHONY : tests/test_figures.cpp.o
+
+tests/test_figures.i: tests/test_figures.cpp.i
+
+.PHONY : tests/test_figures.i
+
+# target to preprocess a source file
+tests/test_figures.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test_figures.cpp.i
+.PHONY : tests/test_figures.cpp.i
+
+tests/test_figures.s: tests/test_figures.cpp.s
+
+.PHONY : tests/test_figures.s
+
+# target to generate assembly for a file
+tests/test_figures.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test_figures.cpp.s
+.PHONY : tests/test_figures.cpp.s
 
 # Help Target
 help:
@@ -285,7 +348,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... lab03"
+	@echo "... tests"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -301,6 +366,9 @@ help:
 	@echo "... src/Trapeze.o"
 	@echo "... src/Trapeze.i"
 	@echo "... src/Trapeze.s"
+	@echo "... tests/test_figures.o"
+	@echo "... tests/test_figures.i"
+	@echo "... tests/test_figures.s"
 .PHONY : help
 
 

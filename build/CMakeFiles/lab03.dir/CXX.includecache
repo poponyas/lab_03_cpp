@@ -6,37 +6,83 @@
 
 #IncludeRegexTransform: 
 
-/workspaces/User/Desktop/lab3cpp/include/Figure.h
+../include/Figure.h
 iostream
 -
 utility
 -
 
-/workspaces/User/Desktop/lab3cpp/include/FiguresArray.h
+../include/FiguresArray.h
 Figure.h
-/workspaces/User/Desktop/lab3cpp/include/Figure.h
+../include/Figure.h
 
-/workspaces/User/Desktop/lab3cpp/include/Pentagon.h
+../include/Pentagon.h
 Figure.h
-/workspaces/User/Desktop/lab3cpp/include/Figure.h
+../include/Figure.h
 
-/workspaces/User/Desktop/lab3cpp/include/Rhombus.h
+/workspaces/lab3cpp/include/Figure.h
+iostream
+-
+utility
+-
+
+/workspaces/lab3cpp/include/FiguresArray.h
 Figure.h
-/workspaces/User/Desktop/lab3cpp/include/Figure.h
+/workspaces/lab3cpp/include/Figure.h
 
-/workspaces/User/Desktop/lab3cpp/include/Trapeze.h
+/workspaces/lab3cpp/include/Pentagon.h
 Figure.h
-/workspaces/User/Desktop/lab3cpp/include/Figure.h
+/workspaces/lab3cpp/include/Figure.h
 
-/workspaces/User/Desktop/lab3cpp/main.cpp
+/workspaces/lab3cpp/include/Rhombus.h
+Figure.h
+/workspaces/lab3cpp/include/Figure.h
+
+/workspaces/lab3cpp/include/Trapeze.h
+Figure.h
+/workspaces/lab3cpp/include/Figure.h
+
+/workspaces/lab3cpp/main.cpp
 iostream
 -
 include/Trapeze.h
-/workspaces/User/Desktop/lab3cpp/include/Trapeze.h
+/workspaces/lab3cpp/include/Trapeze.h
 include/Rhombus.h
-/workspaces/User/Desktop/lab3cpp/include/Rhombus.h
+/workspaces/lab3cpp/include/Rhombus.h
 include/Pentagon.h
-/workspaces/User/Desktop/lab3cpp/include/Pentagon.h
+/workspaces/lab3cpp/include/Pentagon.h
 include/FiguresArray.h
-/workspaces/User/Desktop/lab3cpp/include/FiguresArray.h
+/workspaces/lab3cpp/include/FiguresArray.h
+
+/workspaces/lab3cpp/src/FiguresArray.cpp
+FiguresArray.h
+/workspaces/lab3cpp/src/FiguresArray.h
+iostream
+-
+stdexcept
+-
+
+/workspaces/lab3cpp/src/Pentagon.cpp
+Pentagon.h
+/workspaces/lab3cpp/src/Pentagon.h
+iostream
+-
+cmath
+-
+
+/workspaces/lab3cpp/src/Rhombus.cpp
+../include/Rhombus.h
+/workspaces/lab3cpp/include/Rhombus.h
+iostream
+-
+cmath
+-
+
+/workspaces/lab3cpp/src/Trapeze.cpp
+../include/Trapeze.h
+/workspaces/lab3cpp/include/Trapeze.h
+iostream
+-
+cmath
+-
 
